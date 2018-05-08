@@ -9,15 +9,21 @@
         This is a test.
         <!--Vue.js domain-->
         <br>
-        {{ message }} <!--Vue영역(중괄호 두개 안쪽)-->
+        {{ message + '123' }} <!--Vue영역(중괄호 두개 안쪽)-->
+        <br>
+        <span v-bind:title="date">마우스를 가까이 가져오세요.</span><!--커서를 가져가면 툴팁이 뜸-->
+        <!--v-명령문 : 뷰가 접근하는 명령문-->
+        <span v-if="seen">볼 수 있다.</span> <!--myApp.$data.seen = false 콘솔입력시 안보임-->
  </div>
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
  <script>
  const myApp = new Vue({
  el: '#app',    // HTML에서 id="app"으로 접근 필요, div와 같은 이름이어야함
  data: {
-        message: 'Cloud'
-        }
+    message: 'Cloud', //Vue영역의 message에 해당하는 내용
+    date: '오늘 날짜: ' + new Date().toLocaleString(),
+    seen: true
+ }
     });
  </script>
 </body>
