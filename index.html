@@ -5,15 +5,18 @@
 </head>
 
 <body>
- <div id="app"> //division, 구역
+ <div id="app"> <!--division, 구역-->
         This is a test.
+        <!--Vue.js domain-->
+        <br>
+        {{ message }} <!--Vue영역(중괄호 두개 안쪽)-->
  </div>
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
  <script>
  const myApp = new Vue({
  el: '#app',    // HTML에서 id="app"으로 접근 필요, div와 같은 이름이어야함
  data: {
-        message: 'Hello Vue!'
+        message: 'Cloud'
         }
     });
  </script>
